@@ -333,15 +333,11 @@ int mode = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	//Counter progression
 	counter--;
-	//Separate timer
-	if (counter == 50 || counter == 0) {
+
+	if (counter == 50) {
 		//Switch LED
 		switch (mode) {
 		case 0:
-			//INIT Extra
-			HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET); //EN1 off
-			HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET); //EN2 off
-
 			HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET); //EN3 off
 			HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET); //EN0 on
 			display7SEG(1);
