@@ -12,9 +12,9 @@
 #include "main.h"
 
 //INIT time variables
-extern int hour;
-extern int min;
-extern int sec;
+extern int hour = 0;
+extern int min = 0;
+extern int sec = 0;
 
 //Display function
 void display7SEG0(int num);

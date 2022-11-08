@@ -1,2 +1,3 @@
 global.c:12:6:display7SEG0	16	static
-global.c:110:6:update7SEG	16	static
+global.c:116:6:updateClockBuffer	4	static
+global.c:123:6:update7SEG	16	static

@@ -98,6 +98,9 @@ int main(void)
   setTimer1(125);  //timer1 = 100 = 1s
   setTimer2(1); //timer2 = 50 = 0.5s
   int index_led = 0; //index for display which 7SEG
+  hour = 15; //hr
+  min = 8; //min
+  sec = 50; //sec
   HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET); //Turn off 4 7SEG
   HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET); //
   HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET); //
@@ -113,7 +116,21 @@ int main(void)
 		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin); //Blink LED
 		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin); //Blink DOT
 
+		  if (sec >= 60) {
+			  sec = 0;
+			  min++;
+		  }
 
+		  if (min >= 60) {
+			  min = 0;
+			  hour++;
+		  }
+
+		  if (hour >= 24) {
+			  hour = 0;
+		  }
+		  updateClockBuffer();
+		  sec++;
 		  //Set the time for timer1
 		  setTimer1(100);
 	  }

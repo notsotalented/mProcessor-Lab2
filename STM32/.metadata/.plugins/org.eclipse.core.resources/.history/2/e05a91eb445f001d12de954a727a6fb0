@@ -109,9 +109,6 @@ void display7SEG0(int num) {
 const int MAX_LED = 4;
 int index_led = 0;
 int led_buffer[4] = {1,2,0,3};
-int hour = 0;
-int min = 0;
-int sec = 0;
 //Update Clock Buffer  = Update clock array
 void updateClockBuffer() {
 	led_buffer[0] = hour/10;

@@ -21,6 +21,4 @@ void display7SEG0(int num);
 
 void update7SEG(int index);
 
-void updateClockBuffer();
-
 #endif /* INC_GLOBAL_H_ */

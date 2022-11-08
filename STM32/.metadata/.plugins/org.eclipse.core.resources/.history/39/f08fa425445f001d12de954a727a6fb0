@@ -8,7 +8,7 @@
 #include "global.h"
 
 int state = 0;
-//Display number on LED SEG
+
 void display7SEG0(int num) {
 	  switch(num) {
 	  case 0:
@@ -104,22 +104,9 @@ void display7SEG0(int num) {
 	  }
  }
 
-
-//INIT Clock variables
 const int MAX_LED = 4;
 int index_led = 0;
 int led_buffer[4] = {1,2,0,3};
-int hour = 0;
-int min = 0;
-int sec = 0;
-//Update Clock Buffer  = Update clock array
-void updateClockBuffer() {
-	led_buffer[0] = hour/10;
-	led_buffer[1] = hour%10;
-	led_buffer[2] = min/10;
-	led_buffer[3] = min%10;
-}
-//Update LED SEG
 void update7SEG(int index) {
 	switch (index) {
 	case 0: //Display led_buffer[0] on SEG0

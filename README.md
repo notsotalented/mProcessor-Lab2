@@ -2,4 +2,4 @@
 ## HCMUT Microprocessor Semester 221
 ### Nguyễn Quốc Anh - 1852238
 ### Lab 2 submission
-*Exercise 5*
+*Exercise 5: Function is in global.c*
