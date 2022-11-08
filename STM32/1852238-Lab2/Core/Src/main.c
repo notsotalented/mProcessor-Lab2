@@ -95,8 +95,8 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   //INIT variables
-  setTimer1(125);  //timer1 = 100 = 1s
-  setTimer2(1); //timer2 = 50 = 0.5s
+  setTimer1(10);  //timer1 (ms)
+  setTimer2(10); //timer2
   int index_led = 0; //index for display which 7SEG
   hour = 15; //hr
   min = 8; //min
@@ -132,7 +132,7 @@ int main(void)
 		  updateClockBuffer();
 		  sec++;
 		  //Set the time for timer1
-		  setTimer1(100);
+		  setTimer1(1000);
 	  }
 
 	  if (timer2_flag == 1) {
@@ -147,7 +147,7 @@ int main(void)
 		  update7SEG(index_led++); //display which 7SEG
 
 		  //Set the time for timer2
-		  setTimer2(25);
+		  setTimer2(250);
 	  }
 
 
