@@ -97,8 +97,8 @@ int main(void)
   //INIT variables
   setTimer1(100);  //timer1 = 100 = 1s
   setTimer2(50); //timer2 = 50 = 0.5s
-  int state = 0; //state [0-3]
-  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET); //Turn of 4 7SEG
+  int index_led = 0; //index for display which 7SEG
+  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET); //Turn off 4 7SEG
   HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET); //
   HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET); //
   HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET); /////////////////
@@ -117,41 +117,22 @@ int main(void)
 		  //Set the time for timer1
 		  setTimer1(100);
 	  }
-	  //INIT timer2
+
 	  if (timer2_flag == 1) {
 		  //Reset timer2
 		  timer2_flag = 0;
 		  //TODO
-		  switch(state) {
-		  case 0:
-			  display7SEG0(1); //Display 1
-			  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET); //7SEG0 on
-			  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET); //7SEG3 off
-			  state = 1;
-			  break;
-		  case 1:
-			  display7SEG0(2); //Display 2
-			  HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, RESET); //7SEG1 on
-			  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET); //7SEG0 off
-			  state = 2;
-			  break;
-		  case 2:
-			  display7SEG0(3); //Display 3
-			  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, RESET); //7SEG2 on
-			  HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET); //7SEG1 off
-			  state = 3;
-			  break;
-		  case 3:
-			  display7SEG0(0); //Display 0
-			  HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, RESET); //7SEG3 on
-			  HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET); //7SEG2 off
-			  state = 0;
-			  break;
+		  //Reset index
+		  if (index_led >= 4) {
+			  index_led = 0;
 		  }
+
+		  update7SEG(index_led++); //display which 7SEG
 
 		  //Set the time for timer2
 		  setTimer2(50);
 	  }
+
 
     /* USER CODE END WHILE */
 

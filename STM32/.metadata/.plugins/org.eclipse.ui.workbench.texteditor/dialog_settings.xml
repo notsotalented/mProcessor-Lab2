@@ -6,12 +6,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="SEG"/>
+		<item key="selection" value="EN"/>
 		<list key="findhistory">
+			<item value="SEG"/>
+			<item value="buffer"/>
 			<item value="SEG_"/>
 			<item value="LED7"/>
 		</list>
 		<list key="replacehistory">
+			<item value="EN"/>
 			<item value="SEG"/>
 		</list>
 	</section>

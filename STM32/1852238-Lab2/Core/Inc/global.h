@@ -14,4 +14,6 @@
 //Display function
 void display7SEG0(int num);
 
+void update7SEG(int index);
+
 #endif /* INC_GLOBAL_H_ */
