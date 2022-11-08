@@ -96,7 +96,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   //INIT variables
   setTimer1(125);  //timer1 = 100 = 1s
-  setTimer2(1); //timer2 = 50 = 0.5s
+  setTimer2(25); //timer2 = 50 = 0.5s
   int index_led = 0; //index for display which 7SEG
   HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET); //Turn off 4 7SEG
   HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET); //

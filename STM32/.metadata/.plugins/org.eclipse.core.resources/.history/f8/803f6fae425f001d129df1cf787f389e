@@ -130,7 +130,7 @@ int main(void)
 		  update7SEG(index_led++); //display which 7SEG
 
 		  //Set the time for timer2
-		  setTimer2(25);
+		  setTimer2(1);
 	  }
 
 
