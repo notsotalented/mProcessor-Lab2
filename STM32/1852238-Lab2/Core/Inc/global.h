@@ -23,4 +23,6 @@ void update7SEG(int index);
 
 void updateClockBuffer();
 
+void updateLEDMatrix(int index);
+
 #endif /* INC_GLOBAL_H_ */
