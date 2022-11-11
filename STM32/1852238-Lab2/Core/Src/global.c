@@ -153,19 +153,105 @@ void update7SEG(int index) {
 	}
 }
 
+
 //Display LED Matrix
 const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
-uint8_t matrix_buffer[8] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08};
-void updateLEDMatrix(int index) {
+
+void updateCOLMatrix(int col_buffer[8]) {
+	HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, col_buffer[0]);
+	HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, col_buffer[1]);
+	HAL_GPIO_WritePin(ENM2_GPIO_Port, ENM2_Pin, col_buffer[2]);
+	HAL_GPIO_WritePin(ENM3_GPIO_Port, ENM3_Pin, col_buffer[3]);
+	HAL_GPIO_WritePin(ENM4_GPIO_Port, ENM4_Pin, col_buffer[4]);
+	HAL_GPIO_WritePin(ENM5_GPIO_Port, ENM5_Pin, col_buffer[5]);
+	HAL_GPIO_WritePin(ENM6_GPIO_Port, ENM6_Pin, col_buffer[6]);
+	HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, col_buffer[7]);
+}
+
+void updateROWMatrix(int row_buffer[8]) {
+	HAL_GPIO_WritePin(ROW0_GPIO_Port, ROW0_Pin, row_buffer[0]);
+	HAL_GPIO_WritePin(ROW1_GPIO_Port, ROW1_Pin, row_buffer[1]);
+	HAL_GPIO_WritePin(ROW2_GPIO_Port, ROW2_Pin, row_buffer[2]);
+	HAL_GPIO_WritePin(ROW3_GPIO_Port, ROW3_Pin, row_buffer[3]);
+	HAL_GPIO_WritePin(ROW4_GPIO_Port, ROW4_Pin, row_buffer[4]);
+	HAL_GPIO_WritePin(ROW5_GPIO_Port, ROW5_Pin, row_buffer[5]);
+	HAL_GPIO_WritePin(ROW6_GPIO_Port, ROW6_Pin, row_buffer[6]);
+	HAL_GPIO_WritePin(ROW7_GPIO_Port, ROW7_Pin, row_buffer[7]);
+}
+
+void updateLEDMatrix(int index, int incre) {
 	switch (index) {
-	case 0:
-		HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, matrix_buffer[index]);
+	case 0: {
+		int col_buffer[8] = {1,1,1,1,1,1,1,1}; //COLUM--->ASC
+		col_buffer[index+incre] = 0;
+		int row_buffer[8] = {1,1,1,1,1,1,1,1}; //ROW \/ ASC
+		updateCOLMatrix(col_buffer);
+		updateROWMatrix(row_buffer);
 		break;
-	case 1:
-		HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, matrix_buffer[index]);
+	}
+	case 1: {
+		int col_buffer[8] = {1,1,1,1,1,1,1,1}; //COLUM--->ASC
+		col_buffer[index+incre] = 0;
+		int row_buffer[8] = {1,1,0,0,0,1,1,1}; //ROW \/ ASC
+		updateCOLMatrix(col_buffer);
+		updateROWMatrix(row_buffer);
 		break;
-	default:
+	}
+	case 2: {
+		int col_buffer[8] = {1,1,1,1,1,1,1,1}; //COLUM--->ASC
+		col_buffer[index+incre] = 0;
+		int row_buffer[8] = {1,0,0,0,0,0,1,1}; //ROW \/ ASC
+		updateCOLMatrix(col_buffer);
+		updateROWMatrix(row_buffer);
 		break;
+	}
+	case 3: {
+		int col_buffer[8] = {1,1,1,1,1,1,1,1}; //COLUM--->ASC
+		col_buffer[index+incre] = 0;
+		int row_buffer[8] = {1,1,0,0,0,0,0,1}; //ROW \/ ASC
+		updateCOLMatrix(col_buffer);
+		updateROWMatrix(row_buffer);
+		break;
+	}
+	case 4: {
+		int col_buffer[8] = {1,1,1,1,1,1,1,1}; //COLUM--->ASC
+		col_buffer[index+incre] = 0;
+		int row_buffer[8] = {1,1,0,0,0,0,0,1}; //ROW \/ ASC
+		updateCOLMatrix(col_buffer);
+		updateROWMatrix(row_buffer);
+		break;
+	}
+	case 5: {
+		int col_buffer[8] = {1,1,1,1,1,1,1,1}; //COLUM--->ASC
+		col_buffer[index+incre] = 0;
+		int row_buffer[8] = {1,0,0,0,0,0,1,1}; //ROW \/ ASC
+		updateCOLMatrix(col_buffer);
+		updateROWMatrix(row_buffer);
+		break;
+	}
+	case 6: {
+		int col_buffer[8] = {1,1,1,1,1,1,1,1}; //COLUM--->ASC
+		col_buffer[index+incre] = 0;
+		int row_buffer[8] = {1,1,0,0,0,1,1,1}; //ROW \/ ASC
+		updateCOLMatrix(col_buffer);
+		updateROWMatrix(row_buffer);
+		break;
+	}
+	case 7: {
+		int col_buffer[8] = {1,1,1,1,1,1,1,1}; //COLUM--->ASC
+		col_buffer[index+incre] = 0;
+		int row_buffer[8] = {1,1,1,1,1,1,1,1}; //ROW \/ ASC
+		updateCOLMatrix(col_buffer);
+		updateROWMatrix(row_buffer);
+		break;
+	}
+	default: {
+		int col_buffer[8] = {1,1,1,1,1,1,1,1}; //COLUM--->ASC
+		int row_buffer[8] = {1,1,1,1,1,1,1,1}; //ROW \/ ASC
+		updateCOLMatrix(col_buffer);
+		updateROWMatrix(row_buffer);
+		break;
+	}
 	}
 }

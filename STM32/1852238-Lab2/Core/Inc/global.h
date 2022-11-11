@@ -23,6 +23,10 @@ void update7SEG(int index);
 
 void updateClockBuffer();
 
-void updateLEDMatrix(int index);
+void updateCOLMatrix(int col_buffer[8]);
+
+void updateROWMatrix(int row_buffer[8]);
+
+void updateLEDMatrix(int index, int incre);
 
 #endif /* INC_GLOBAL_H_ */
