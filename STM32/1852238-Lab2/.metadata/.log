@@ -1,0 +1,60 @@
+!SESSION 2022-11-06 09:37:04.823 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-06 09:38:02.037
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-06 09:38:02.160
+!MESSAGE Log4j initialized with config file D:\LearningMaterial\Mirco-Processor\Lab2\mProcessor-Lab2\STM32\1852238-Lab2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-06 09:38:07.611
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-11-07 19:55:02.727 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-07 19:57:36.078
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-07 19:57:36.361
+!MESSAGE Log4j initialized with config file D:\LearningMaterial\Mirco-Processor\Lab2\mProcessor-Lab2\STM32\1852238-Lab2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-07 19:57:55.803
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-11-07 20:30:07.156 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-07 20:30:37.926
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-07 20:30:38.004
+!MESSAGE Log4j initialized with config file D:\LearningMaterial\Mirco-Processor\Lab2\mProcessor-Lab2\STM32\1852238-Lab2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-07 20:30:54.435
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-11-07 20:32:05.230 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-07 20:32:56.228
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-07 20:32:56.320
+!MESSAGE Log4j initialized with config file D:\LearningMaterial\Mirco-Processor\Lab2\mProcessor-Lab2\STM32\1852238-Lab2\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-07 20:33:12.761
+!MESSAGE Started RMI Server, listening on port 41337
